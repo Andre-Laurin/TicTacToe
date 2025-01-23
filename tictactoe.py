@@ -44,7 +44,7 @@ def display_board(board):
     print(f"[ {board[3]} ] [ {board[4]} ] [ {board[5]} ]")
     print(f"[ {board[6]} ] [ {board[7]} ] [ {board[8]} ]")
 
-# I think this is the long hard way to do it. But I am still learning and it worked
+# I think this is the long hard way to do it. But I am still learning and it works
 def check_win(board):
     # Check all rows
     if board[0] == 'X' and board [1] == 'X' and board[2] == 'X': return 'X'
