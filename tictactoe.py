@@ -79,5 +79,10 @@ def new_game(game_status):
         else: 
             print("\nSo is that a Y or a N")
 
+def computer_move():
+    #This is where I'll add some basic logic code for a player vs computer game
+    
+    pass
+
 if __name__ == '__main__':
     main()
