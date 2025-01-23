@@ -4,8 +4,11 @@ def main():
     game_status = True
     player = 'X'
     moves = 0
+    computer_opponent = False
+    computer_opponent_turn = False    
     board = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-    print("Welcome to Tic Tac Toe\nCoded by Andre Laurin\n\nPlayer 1 is X and goes first.\nSelect a number from 0 to 9, 0 quits the game.\n")
+    print("Welcome to Tic Tac Toe\nCoded by Andre Laurin\n\n")
+    game_menu(computer_opponent, computer_opponent_turn)
     display_board(board)
 
     while (game_status == True):
@@ -79,9 +82,22 @@ def new_game(game_status):
         else: 
             print("\nSo is that a Y or a N")
 
+def game_menu(computer_opponent, computer_opponent_turn):
+    choice = False
+    while (choice == False):
+        print("Whould you like a player vs player (P) or a player vs computer (C) game?\n")
+        selection = input()
+        if selection == 'p' or selection == 'P': return False, False
+        if selection == 'c' or selection == 'C':             
+            while (choice == False):
+                print("Who goes first as X, (C) computer or (P) Player?")
+                selection = input()
+                if selection == 'c' or selection == 'C': return True, True
+                if selection == 'p' or selection == 'P': return True, False
+                    
 def computer_move():
     #This is where I'll add some basic logic code for a player vs computer game
-    
+
     pass
 
 if __name__ == '__main__':
